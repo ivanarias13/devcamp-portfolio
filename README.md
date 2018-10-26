@@ -22,3 +22,21 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+###################MD###############
+
+>this is a ruby on rails 5 application allows users to create their own portfolios
+###features
+- Real time chat engine
+- Blog
+- POrtfolio
+- Drag and drop interface
+###code example
+```ruby
+def my_great_method
+  puts "here it is"
+end
+```
+
+```javascript
+alert('hi there');
+```
