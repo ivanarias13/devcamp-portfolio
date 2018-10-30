@@ -15,13 +15,13 @@
 
 
 <% @portfolio_items.each do |portfolio_item| %>
-  <p><%= portfolio_item.title %></p>
+  <p><%= link_to portfolio_item.title, portfolio_path(portfolio_item) %></p>
   <p><%= portfolio_item.Subtitle %></p>
   <p><%= portfolio_item.body %></p>
   <%= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %>
 
 <%-#same way to do things####-%>
-<%= link_to "Edit", edit_portfolio_path(portfolio_item.id) %>
-<a href="/portfolios/<%= portfolio_item.id %>/edit">Edit 2</a>
+<%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
+<a href="/portfolios/<%= portfolio_item %>/edit">Edit 2</a>
 
 <% end %>
