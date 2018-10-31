@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   #get 'pages/about'
   #get 'pages/contact'
   #################
-  resources :blogs
+  resources :blogs do
+    member do
+      get :toggle_status
+     end
+  end
   #adding this on class 64 custon routes
 
   root to: 'pages#home'
