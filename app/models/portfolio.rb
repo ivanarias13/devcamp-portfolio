@@ -5,4 +5,11 @@ class Portfolio < ApplicationRecord
   end
 
   scope :ruby_on_rails_portfolio_items, -> {where(Subtitle: 'Ruby on Rails') }
+
+  after_initialize :set_defaults
+
+  def set_defaults
+    self.main_image ||= "https://via.placeholder.com/300x150"
+    self.thumb_image ||= "https://via.placeholder.com/200x100"
+  end
 end
