@@ -1,6 +1,14 @@
 class PortfoliosController < ApplicationController
   def index
+    ####diferenteds maneras de mostrar los topic en el web se relaciona cone l codigo en portfolio.rb#####
+      #@portfolio_items = Portfolio.where(Subtitle: 'Angular')
+      #@portfolio_items = Portfolio.angular
+      #@portfolio_items = Portfolio.ruby_on_rails_portfolio_items
       @portfolio_items = Portfolio.all
+  end
+
+  def angular
+    @angular_portfolio_items = Portfolio.angular
   end
 
    def new
