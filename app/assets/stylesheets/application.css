@@ -13,9 +13,3 @@
  *= require_tree .
  *= require_self
  */
-h1 {
-  color: blue
-}
-p {
-  color: rgb(8,77,8);
-}
