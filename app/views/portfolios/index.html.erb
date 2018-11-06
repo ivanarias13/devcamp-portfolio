@@ -12,11 +12,14 @@
 </p>
 
 <br><br>
-<% @portfolio_items.each do |portfolio_item| %>
-  <p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></p>
-  <p><%= portfolio_item.Subtitle %></p>
-  <p><%= portfolio_item.body %></p>
+
+<div>
+  <% @portfolio_items.each do |portfolio_item| %>
+    <p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></p>
+    <p><%= portfolio_item.Subtitle %></p>
+    <p><%= portfolio_item.body %></p>
   <%= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %>
+</div>
 <br><br>
 <%-#same way to do things####-%>
 <%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
