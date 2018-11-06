@@ -19,11 +19,13 @@
     <p><%= portfolio_item.Subtitle %></p>
     <p><%= portfolio_item.body %></p>
   <%= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %>
+
 </div>
 <br><br>
 <%-#same way to do things####-%>
 <%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
 <%= link_to 'Borrar Portfolio Item', portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Estas Seguro?' } %>
 <br><br>
+ <hr>
 <% end %>
 <br><br>

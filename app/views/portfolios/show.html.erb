@@ -11,3 +11,9 @@
 <% end %>
 <%= link_to "Edit", edit_portfolio_path(@portfolio_item) %>
 <a href="/portfolios">Home</a>
+
+
+
+<hr>
+<%= Portfolio.find(params[:id]).title %>
+<%#= params.inspect %>
