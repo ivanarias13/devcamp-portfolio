@@ -3,7 +3,6 @@
   <head>
     <title>DevcampPortfolio</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -13,6 +12,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
+<<<<<<< HEAD
     <% if current_user %>
       <%= link_to "logout", destroy_user_session_path, method: :delete %>
     <% else %>
@@ -20,7 +20,13 @@
 
       <%= link_to "login", new_user_session_path %>
     <%end%>
+=======
+>>>>>>> controller
 
     <%= yield %>
+
+    <% if session[:source] %>
+      <p>Thanks for visiting me from <%= session[:source] %></p>
+    <% end %>
   </body>
 </html>
