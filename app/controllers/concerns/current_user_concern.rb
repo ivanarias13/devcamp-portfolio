@@ -1,5 +1,5 @@
 module CurrentUserConcern
-  #extend ActiveSupport::Concern
+  extend ActiveSupport::Concern
 
   def current_user
      super || usuario_invitado
