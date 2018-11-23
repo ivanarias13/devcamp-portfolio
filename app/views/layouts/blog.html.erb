@@ -26,7 +26,7 @@
 
     <%= yield %>
 <%#=. rendering navidation bar form shared view%>
-    <%= render "shared/nav"%>
+    <%= render "shared/nav", location: 'bottom' %>
 
     <hr>
     <% if session[:source] %>
